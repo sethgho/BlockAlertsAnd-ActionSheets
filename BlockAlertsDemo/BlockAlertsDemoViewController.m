@@ -125,6 +125,11 @@
     [alert show];
 }
 
+- (IBAction)testClick:(id)sender {
+	UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Test Title" delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Destroy" otherButtonTitles:@"Test 3", @"Test 4", nil];
+	[sheet showInView:self.view];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self showAlert:nil];

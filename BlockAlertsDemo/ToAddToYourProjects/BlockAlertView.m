@@ -192,7 +192,7 @@ static UIFont *buttonFont = nil;
 
 - (void)addButtonWithTitle:(NSString *)title block:(void (^)())block 
 {
-    [self addButtonWithTitle:title color:@"gray" block:block];
+    [self addButtonWithTitle:title color:@"default" block:block];
 }
 
 - (void)setCancelButtonWithTitle:(NSString *)title block:(void (^)())block 
