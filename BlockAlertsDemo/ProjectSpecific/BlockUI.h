@@ -39,13 +39,10 @@
 
 #define kActionSheetButtonFont          [UIFont systemFontOfSize:20]
 #define kActionSheetCancelFont			[UIFont boldSystemFontOfSize:20]
-#define kActionSheetButtonTextColor     [UIColor blackColor]
+#define kActionSheetButtonTextColor     [UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]
 #define kActionSheetButtonDestructColor	[UIColor redColor]
 #define kActionSheetButtonShadowColor   [UIColor clearColor]
 #define kActionSheetButtonShadowOffset  CGSizeMake(0, 0)
-
-#define kActionSheetBackground              @"action-sheet-panel.png"
-#define kActionSheetBackgroundCapHeight     30
 
 
 // Alert View constants
@@ -56,20 +53,25 @@
 
 
 #define kAlertViewTitleFont             [UIFont boldSystemFontOfSize:20]
-#define kAlertViewTitleTextColor        [UIColor colorWithWhite:244.0/255.0 alpha:1.0]
-#define kAlertViewTitleShadowColor      [UIColor blackColor]
-#define kAlertViewTitleShadowOffset     CGSizeMake(0, -1)
+#define kAlertViewTitleTextColor        [UIColor blackColor];
+#define kAlertViewTitleShadowColor      [UIColor clearColor]
+#define kAlertViewTitleShadowOffset     CGSizeMake(0, 0)
+#define kAlertViewTitlePadding			5
 
 #define kAlertViewMessageFont           [UIFont systemFontOfSize:18]
-#define kAlertViewMessageTextColor      [UIColor colorWithWhite:244.0/255.0 alpha:1.0]
-#define kAlertViewMessageShadowColor    [UIColor blackColor]
-#define kAlertViewMessageShadowOffset   CGSizeMake(0, -1)
+#define kAlertViewMessageTextColor      [UIColor blackColor]
+#define kAlertViewMessageShadowColor    [UIColor clearColor]
+#define kAlertViewMessageShadowOffset   CGSizeMake(0, 0)
 
-#define kAlertViewButtonFont            [UIFont boldSystemFontOfSize:18]
-#define kAlertViewButtonTextColor       [UIColor grayColor]
+#define kAlertViewCancelFont            [UIFont boldSystemFontOfSize:18]
+#define kAlertViewButtonFont            [UIFont systemFontOfSize:18]
+#define kAlertViewButtonTextColor       [UIColor colorWithRed:19/255.0 green:144/255.0 blue:255/255.0 alpha:1.0]
+#define KAlertViewDestructColor			[UIColor redColor]
 #define kAlertViewButtonShadowColor     [UIColor clearColor]
 #define kAlertViewButtonShadowOffset    CGSizeMake(0, 0)
 
+
+#define kAlertViewBackgroundWidth		280
 #define kAlertViewBackground            @"alert-window.png"
 #define kAlertViewBackgroundLandscape   @"alert-window-landscape.png"
 #define kAlertViewBackgroundCapHeight   38

@@ -125,9 +125,14 @@
     [alert show];
 }
 
-- (IBAction)testClick:(id)sender {
+- (IBAction)nativeActionSheetClick:(id)sender {
 	UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Test Title" delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Destroy" otherButtonTitles:@"Test 3", @"Test 4", nil];
 	[sheet showInView:self.view];
+}
+
+- (IBAction)nativeAlertViewClick:(id)sender {
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Test title" message:@"This is the message" delegate:nil cancelButtonTitle:@"Cancel Text" otherButtonTitles:@"Test 3", @"Test 4", @"Test 5", nil];
+	[alert show];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

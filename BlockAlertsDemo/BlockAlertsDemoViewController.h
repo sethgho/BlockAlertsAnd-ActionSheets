@@ -20,7 +20,8 @@
 - (IBAction)dismissKeyboard:(id)sender;
 - (IBAction)showTextPrompt:(id)sender;
 - (IBAction)showTableAlert:(id)sender;
-- (IBAction)testClick:(id)sender;
+- (IBAction)nativeActionSheetClick:(id)sender;
+- (IBAction)nativeAlertViewClick:(id)sender;
 
 @property (retain, nonatomic) IBOutlet UITextField *testKeyboard;
 

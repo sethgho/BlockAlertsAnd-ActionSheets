@@ -171,13 +171,23 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uzv-sU-cEc">
-                    <rect key="frame" x="137" y="390" width="46" height="30"/>
+                    <rect key="frame" x="201" y="390" width="68" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button">
+                    <state key="normal" title="Native AS">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="testClick:" destination="-1" eventType="touchUpInside" id="ESM-az-78b"/>
+                        <action selector="nativeActionSheetClick:" destination="-1" eventType="touchUpInside" id="GRy-aE-eDW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Tq-5s-iwN">
+                    <rect key="frame" x="54" y="388" width="62" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Native AI">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nativeAlertViewClick:" destination="-1" eventType="touchUpInside" id="4ID-iV-A4i"/>
                     </connections>
                 </button>
             </subviews>

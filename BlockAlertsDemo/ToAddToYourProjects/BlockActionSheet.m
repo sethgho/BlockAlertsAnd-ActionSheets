@@ -23,8 +23,6 @@ static UIFont *cancelFont = nil;
 {
     if (self == [BlockActionSheet class])
     {
-        background = [UIImage imageNamed:kActionSheetBackground];
-        background = [[background stretchableImageWithLeftCapWidth:0 topCapHeight:kActionSheetBackgroundCapHeight] retain];
         titleFont = [kActionSheetTitleFont retain];
         buttonFont = [kActionSheetButtonFont retain];
 		cancelFont = [kActionSheetCancelFont retain];
@@ -222,10 +220,7 @@ static UIFont *cancelFont = nil;
         button.tag = i++;
         
         [button setBackgroundImage:image forState:UIControlStateNormal];
-//        if (highlightedImage)
-//        {
-//            [button setBackgroundImage:highlightedImage forState:UIControlStateHighlighted];
-//        }
+		
 		if([color isEqualToString:@"red"]){
 			[button setTitleColor:kActionSheetButtonDestructColor forState:UIControlStateNormal];
 		}else {
@@ -242,13 +237,6 @@ static UIFont *cancelFont = nil;
         [_view addSubview:button];
         _height += kActionSheetButtonHeight + kActionSheetBorderTop;
     }
-    
-    UIImageView *modalBackground = [[UIImageView alloc] initWithFrame:_view.bounds];
-    modalBackground.image = background;
-    modalBackground.contentMode = UIViewContentModeScaleToFill;
-    modalBackground.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [_view insertSubview:modalBackground atIndex:0];
-    [modalBackground release];
     
     [BlockBackground sharedInstance].vignetteBackground = _vignetteBackground;
     [[BlockBackground sharedInstance] addToMainWindow:_view];

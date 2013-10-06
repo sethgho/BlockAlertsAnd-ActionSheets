@@ -14,6 +14,7 @@
     NSString *_message;
     BOOL _shown;
     BOOL _cancelBounce;
+	BOOL _hasCancel;
 }
 
 + (BlockAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message;
