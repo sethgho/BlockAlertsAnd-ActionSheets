@@ -34,160 +34,116 @@
                         <action selector="dismissKeyboard:" destination="-1" eventType="touchUpInside" id="30"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8">
                     <rect key="frame" x="14" y="428" width="142" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="backgroundColor" red="0.39607846736907959" green="0.364705890417099" blue="0.35294118523597717" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
                     <size key="titleShadowOffset" width="0.0" height="-1"/>
-                    <state key="normal" title="Show Alert" backgroundImage="button_grey.png">
+                    <state key="normal" title="Alert">
                         <color key="titleColor" red="0.91326529000000001" green="0.88454902000000002" blue="0.60212838999999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="showAlert:" destination="-1" eventType="touchUpInside" id="9"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="10">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="10">
                     <rect key="frame" x="164" y="428" width="142" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="backgroundColor" red="0.39607846736907959" green="0.364705890417099" blue="0.35294118523597717" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
                     <size key="titleShadowOffset" width="0.0" height="-1"/>
-                    <state key="normal" title="Show Action Sheet" backgroundImage="button_grey.png">
+                    <state key="normal" title="Action Sheet">
                         <color key="titleColor" red="0.91326529000000001" green="0.88454902000000002" blue="0.60212838999999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="showActionSheet:" destination="-1" eventType="touchUpInside" id="11"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="12">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="12">
                     <rect key="frame" x="14" y="337" width="142" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="backgroundColor" red="0.61960786581039429" green="0.050980396568775177" blue="0.10588236153125763" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                     <size key="titleShadowOffset" width="0.0" height="-1"/>
-                    <state key="normal" title="Show Al+AS" backgroundImage="button_red.png">
+                    <state key="normal" title="Show Al+AS">
                         <color key="titleColor" red="0.91326529000000001" green="0.88454902000000002" blue="0.60212838999999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="showAlertPlusActionSheet:" destination="-1" eventType="touchUpInside" id="16"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="14">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="14">
                     <rect key="frame" x="164" y="337" width="142" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="backgroundColor" red="0.61960786581039429" green="0.050980396568775177" blue="0.10588236153125763" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                     <size key="titleShadowOffset" width="0.0" height="-1"/>
-                    <state key="normal" title="Show AS+Al" backgroundImage="button_red.png">
+                    <state key="normal" title="Show AS+Al">
                         <color key="titleColor" red="0.91326529000000001" green="0.88454902000000002" blue="0.60212838999999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="showActionSheetPlusAlert:" destination="-1" eventType="touchUpInside" id="17"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="19">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="19">
                     <rect key="frame" x="14" y="237" width="142" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="backgroundColor" red="0.61960786581039429" green="0.050980396568775177" blue="0.10588236153125763" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                     <size key="titleShadowOffset" width="0.0" height="-1"/>
-                    <state key="normal" title="What's Arrived?" backgroundImage="button_red.png">
+                    <state key="normal" title="What's Arrived?">
                         <color key="titleColor" red="0.91326529000000001" green="0.88454902000000002" blue="0.60212838999999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="whatsArrived:" destination="-1" eventType="touchUpInside" id="22"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="21">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="21">
                     <rect key="frame" x="164" y="237" width="142" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="backgroundColor" red="0.61960786581039429" green="0.050980396568775177" blue="0.10588236153125763" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                     <size key="titleShadowOffset" width="0.0" height="-1"/>
-                    <state key="normal" title="Arrived Blog" backgroundImage="button_red.png">
+                    <state key="normal" title="Arrived Blog">
                         <color key="titleColor" red="0.91326529000000001" green="0.88454902000000002" blue="0.60212838999999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="arrivedBlog:" destination="-1" eventType="touchUpInside" id="23"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="24">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="24">
                     <rect key="frame" x="14" y="288" width="142" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="backgroundColor" red="0.61960786581039429" green="0.050980396568775177" blue="0.10588236153125763" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                     <size key="titleShadowOffset" width="0.0" height="-1"/>
-                    <state key="normal" title="Go Nuts" backgroundImage="button_red.png">
+                    <state key="normal" title="Go Nuts">
                         <color key="titleColor" red="0.91326529000000001" green="0.88454902000000002" blue="0.60212838999999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="goNuts:" destination="-1" eventType="touchUpInside" id="26"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="32">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="32">
                     <rect key="frame" x="164" y="288" width="142" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <color key="backgroundColor" red="0.61960786581039429" green="0.050980396568775177" blue="0.10588236153125763" alpha="1" colorSpace="deviceRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                     <size key="titleShadowOffset" width="0.0" height="-1"/>
-                    <state key="normal" title="Text Prompt" backgroundImage="button_red.png">
+                    <state key="normal" title="Text Prompt">
                         <color key="titleColor" red="0.91326529000000001" green="0.88454902000000002" blue="0.60212838999999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="highlighted">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="showTextPrompt:" destination="-1" eventType="touchUpInside" id="34"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uzv-sU-cEc">
-                    <rect key="frame" x="201" y="390" width="68" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Native AS">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="nativeActionSheetClick:" destination="-1" eventType="touchUpInside" id="GRy-aE-eDW"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Tq-5s-iwN">
-                    <rect key="frame" x="54" y="388" width="62" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Native AI">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="nativeAlertViewClick:" destination="-1" eventType="touchUpInside" id="4ID-iV-A4i"/>
                     </connections>
                 </button>
             </subviews>
@@ -196,8 +152,6 @@
         </view>
     </objects>
     <resources>
-        <image name="arrived.png" width="320" height="460"/>
-        <image name="button_grey.png" width="142" height="43"/>
-        <image name="button_red.png" width="142" height="43"/>
+        <image name="arrived.png" width="320" height="480"/>
     </resources>
 </document>
