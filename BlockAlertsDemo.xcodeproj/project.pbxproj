@@ -41,7 +41,6 @@
 		ECFC5F0014EB1DA4004BFD45 /* BlockBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFC5EFB14EB1DA4004BFD45 /* BlockBackground.m */; };
 		ECFC5F0114EB1DA4004BFD45 /* BlockTextPromptAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFC5EFD14EB1DA4004BFD45 /* BlockTextPromptAlertView.m */; };
 		ED3C9EF418018E2D0070DC27 /* action-button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED3C9EF318018E2D0070DC27 /* action-button.png */; };
-		ED3C9F0A18018EBF0070DC27 /* action-button.png in Resources */ = {isa = PBXBuildFile; fileRef = ED3C9EFA18018EBF0070DC27 /* action-button.png */; };
 		ED3C9F0B18018EBF0070DC27 /* action-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED3C9EFB18018EBF0070DC27 /* action-button@2x.png */; };
 		ED3C9F1A180196340070DC27 /* action-button-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = ED3C9F16180196340070DC27 /* action-button-bottom.png */; };
 		ED3C9F1B180196340070DC27 /* action-button-bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED3C9F17180196340070DC27 /* action-button-bottom@2x.png */; };
@@ -278,7 +277,7 @@
 		EC90169114BB629F00EF52E1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "CodeCrop Software";
 			};
 			buildConfigurationList = EC90169414BB629F00EF52E1 /* Build configuration list for PBXProject "BlockAlertsDemo" */;
@@ -308,7 +307,6 @@
 				ED3C9F1B180196340070DC27 /* action-button-bottom@2x.png in Resources */,
 				EC9016B514BB629F00EF52E1 /* BlockAlertsDemoViewController.xib in Resources */,
 				ED3C9F20180197370070DC27 /* action-button-mid.png in Resources */,
-				ED3C9F0A18018EBF0070DC27 /* action-button.png in Resources */,
 				EC9016F414BB679C00EF52E1 /* action-sheet-panel.png in Resources */,
 				EC9016F514BB679C00EF52E1 /* action-sheet-panel@2x.png in Resources */,
 				EC9016F614BB679C00EF52E1 /* alert-black-button.png in Resources */,
@@ -381,7 +379,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -393,10 +396,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -405,13 +413,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
