@@ -24,7 +24,7 @@
 
 // Action Sheet constants
 
-#define kActionSheetBounce          0
+#define kActionSheetBounce          10
 #define kActionSheetBorderSides		10
 #define kActionSheetBorderTop		1
 #define kActionSheetButtonHeight	45
@@ -47,7 +47,7 @@
 
 // Alert View constants
 
-#define kAlertViewBounce         20
+#define kAlertViewBounce         10
 #define kAlertViewBorder         (NeedsLandscapePhoneTweaks ? 5 : 10)
 #define kAlertButtonHeight       (NeedsLandscapePhoneTweaks ? 35 : 44)
 

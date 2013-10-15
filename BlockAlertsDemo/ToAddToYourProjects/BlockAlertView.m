@@ -343,7 +343,7 @@ static UIFont *cancelFont = nil;
     
     _cancelBounce = NO;
     
-    [UIView animateWithDuration:0.4
+    [UIView animateWithDuration:0.25
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{

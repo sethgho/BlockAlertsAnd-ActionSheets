@@ -250,7 +250,7 @@ static UIFont *cancelFont = nil;
     __block CGPoint center = _view.center;
     center.y -= _height + kActionSheetBounce;
     
-    [UIView animateWithDuration:0.4
+    [UIView animateWithDuration:0.25
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
