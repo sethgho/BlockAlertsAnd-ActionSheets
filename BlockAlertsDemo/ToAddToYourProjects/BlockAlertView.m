@@ -18,11 +18,6 @@ static UIFont *messageFont = nil;
 static UIFont *buttonFont = nil;
 static UIFont *cancelFont = nil;
 
-typedef enum {
-	kBlockButtonDefault,
-	kBlockButtonCancel,
-	kBlockButtonDestroy
-} BlockButtonType;
 #pragma mark - init
 
 + (void)initialize

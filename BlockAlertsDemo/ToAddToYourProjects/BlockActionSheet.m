@@ -104,14 +104,15 @@ static UIFont *cancelFont = nil;
     return _blocks.count;
 }
 
-- (void)addButtonWithTitle:(NSString *)title color:(NSString*)color block:(void (^)())block atIndex:(NSInteger)index
+- (void)addButtonWithTitle:(NSString *)title buttonType:(BlockButtonType)type block:(void (^)())block atIndex:(NSInteger)index
 {
-	if([color isEqualToString:@"black"]){
+	NSValue *typeVal = [NSValue valueWithBytes:&type objCType:@encode(BlockButtonType)];
+	if(type == kBlockButtonCancel){
 		_hasCancel = YES;
 		[_blocks addObject:[NSArray arrayWithObjects:
                                block ? [[block copy] autorelease] : [NSNull null],
                                title,
-                               color,
+                               typeVal,
 							   nil]];
 	} else if (index >= 0)
     {
@@ -121,7 +122,7 @@ static UIFont *cancelFont = nil;
         [_blocks insertObject:[NSArray arrayWithObjects:
                                block ? [[block copy] autorelease] : [NSNull null],
                                title,
-                               color,
+                               typeVal,
                                nil]
                       atIndex:index];
     }
@@ -130,7 +131,7 @@ static UIFont *cancelFont = nil;
         [_blocks insertObject:[NSArray arrayWithObjects:
                             block ? [[block copy] autorelease] : [NSNull null],
                             title,
-                            color,
+                            typeVal,
                             nil]
 							atIndex:_blocks.count - 1];
     }
@@ -138,32 +139,32 @@ static UIFont *cancelFont = nil;
 
 - (void)setDestructiveButtonWithTitle:(NSString *)title block:(void (^)())block
 {
-    [self addButtonWithTitle:title color:@"red" block:block atIndex:-1];
+    [self addButtonWithTitle:title buttonType:kBlockButtonDestroy block:block atIndex:-1];
 }
 
 - (void)setCancelButtonWithTitle:(NSString *)title block:(void (^)())block
 {
-    [self addButtonWithTitle:title color:@"black" block:block atIndex:-1];
+    [self addButtonWithTitle:title buttonType:kBlockButtonCancel block:block atIndex:-1];
 }
 
 - (void)addButtonWithTitle:(NSString *)title block:(void (^)())block 
 {
-    [self addButtonWithTitle:title color:@"default" block:block atIndex:-1];
+    [self addButtonWithTitle:title buttonType:kBlockButtonDefault block:block atIndex:-1];
 }
 
 - (void)setDestructiveButtonWithTitle:(NSString *)title atIndex:(NSInteger)index block:(void (^)())block
 {
-    [self addButtonWithTitle:title color:@"red" block:block atIndex:index];
+    [self addButtonWithTitle:title buttonType:kBlockButtonDestroy block:block atIndex:index];
 }
 
 - (void)setCancelButtonWithTitle:(NSString *)title atIndex:(NSInteger)index block:(void (^)())block
 {
-    [self addButtonWithTitle:title color:@"black" block:block atIndex:index];
+    [self addButtonWithTitle:title buttonType:kBlockButtonCancel block:block atIndex:index];
 }
 
 - (void)addButtonWithTitle:(NSString *)title atIndex:(NSInteger)index block:(void (^)())block 
 {
-    [self addButtonWithTitle:title color:@"default" block:block atIndex:index];
+    [self addButtonWithTitle:title buttonType:kBlockButtonDefault block:block atIndex:index];
 }
 
 - (void)showInView:(UIView *)view
@@ -173,10 +174,11 @@ static UIFont *cancelFont = nil;
     for (NSArray *block in _blocks)
     {
         NSString *title = [block objectAtIndex:1];
-        NSString *color = [block objectAtIndex:2];
+        BlockButtonType buttonType;
+		[[block objectAtIndex:2] getValue:&buttonType];
 
 		UIImage *image;
-		if([color isEqualToString:@"black"]) {
+		if(buttonType == kBlockButtonCancel) {
 			image = [UIImage imageNamed:@"action-button.png"];
 			image = [image stretchableImageWithLeftCapWidth:7 topCapHeight:7];
 		}else if(i == _blocks.count-1){
@@ -196,7 +198,7 @@ static UIFont *cancelFont = nil;
 		
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(kActionSheetBorderSides, _height, _view.bounds.size.width-kActionSheetBorderSides*2, kActionSheetButtonHeight);
-		if([color isEqualToString:@"black"]){
+		if(buttonType == kBlockButtonCancel){
 			_height += kActionSheetCancelMargin;
 			button.frame = CGRectMake(kActionSheetBorderSides, _height, _view.bounds.size.width-kActionSheetBorderSides*2, kActionSheetButtonHeight);
 			_height += kActionSheetCancelMargin;
@@ -221,7 +223,7 @@ static UIFont *cancelFont = nil;
         
         [button setBackgroundImage:image forState:UIControlStateNormal];
 		
-		if([color isEqualToString:@"red"]){
+		if(buttonType == kBlockButtonDestroy){
 			[button setTitleColor:kActionSheetButtonDestructColor forState:UIControlStateNormal];
 		}else {
 			[button setTitleColor:kActionSheetButtonTextColor forState:UIControlStateNormal];

@@ -76,4 +76,11 @@
 #define kAlertViewBackgroundLandscape   @"alert-window-landscape.png"
 #define kAlertViewBackgroundCapHeight   38
 
+
+typedef enum {
+	kBlockButtonDefault,
+	kBlockButtonCancel,
+	kBlockButtonDestroy
+} BlockButtonType;
+
 #endif
