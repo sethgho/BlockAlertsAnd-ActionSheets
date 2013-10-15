@@ -284,7 +284,7 @@ static UIFont *cancelFont = nil;
     {
         CGPoint center = _view.center;
         center.y += _view.bounds.size.height;
-        [UIView animateWithDuration:0.4
+        [UIView animateWithDuration:0.25
                               delay:0.0
                             options:UIViewAnimationOptionCurveEaseIn
                          animations:^{

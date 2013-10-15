@@ -394,7 +394,7 @@ static UIFont *cancelFont = nil;
                              _view.center = center;
                          } 
                          completion:^(BOOL finished) {
-                             [UIView animateWithDuration:0.4
+                             [UIView animateWithDuration:0.25
                                                    delay:0.0 
                                                  options:UIViewAnimationOptionCurveEaseIn
                                               animations:^{
