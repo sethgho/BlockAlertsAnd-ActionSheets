@@ -18,6 +18,11 @@ static UIFont *messageFont = nil;
 static UIFont *buttonFont = nil;
 static UIFont *cancelFont = nil;
 
+typedef enum {
+	kBlockButtonDefault,
+	kBlockButtonCancel,
+	kBlockButtonDestroy
+} BlockButtonType;
 #pragma mark - init
 
 + (void)initialize
@@ -199,19 +204,20 @@ static UIFont *cancelFont = nil;
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Public
 
-- (void)addButtonWithTitle:(NSString *)title color:(NSString*)color block:(void (^)())block 
+- (void)addButtonWithTitle:(NSString *)title buttonType:(BlockButtonType)type block:(void (^)())block
 {
-	if([color isEqualToString:@"black"]){
+	NSValue *typeVal = [NSValue valueWithBytes:&type objCType:@encode(BlockButtonType)];
+	if(type == kBlockButtonCancel){
 		[_blocks addObject:[NSArray arrayWithObjects:
 							   block ? [[block copy] autorelease] : [NSNull null],
 							   title,
-							   color,
+							   typeVal,
 							   nil]];
 	}else {
 		[_blocks insertObject:[NSArray arrayWithObjects:
 							   block ? [[block copy] autorelease] : [NSNull null],
 							   title,
-							   color,
+							   typeVal,
 							   nil]
 					  atIndex:_blocks.count - 1];
 	}
@@ -219,22 +225,19 @@ static UIFont *cancelFont = nil;
 
 - (void)addButtonWithTitle:(NSString *)title block:(void (^)())block 
 {
-    [self addButtonWithTitle:title color:@"default" block:block];
+    [self addButtonWithTitle:title buttonType:kBlockButtonDefault block:block];
 }
 
 - (void)setCancelButtonWithTitle:(NSString *)title block:(void (^)())block 
 {
-    [self addButtonWithTitle:title color:@"black" block:block];
+    [self addButtonWithTitle:title buttonType:kBlockButtonCancel block:block];
 }
 
 - (void)setDestructiveButtonWithTitle:(NSString *)title block:(void (^)())block
 {
-    [self addButtonWithTitle:title color:@"red" block:block];
+    [self addButtonWithTitle:title buttonType:kBlockButtonDestroy block:block];
 }
 
-- (void)addButtonWithTitle:(NSString *)title imageIdentifier:(NSString*)identifier block:(void (^)())block {
-    [self addButtonWithTitle:title color:identifier block:block];
-}
 
 - (void)show
 {
@@ -246,8 +249,9 @@ static UIFont *cancelFont = nil;
     {
         NSArray *block = [_blocks objectAtIndex:i];
         NSString *title = [block objectAtIndex:1];
-        NSString *color = [block objectAtIndex:2];
-
+        BlockButtonType buttonType;
+		[[block objectAtIndex:2] getValue:&buttonType];
+		
 		UIImage *image;
 		if(i == _blocks.count-1){
 			image = [UIImage imageNamed:@"action-button-bottom.png"];
@@ -262,7 +266,7 @@ static UIFont *cancelFont = nil;
 
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(xOffset, _height, width, kAlertButtonHeight);
-		if([color isEqualToString:@"black"]){
+		if(buttonType == kBlockButtonCancel){
 			button.titleLabel.font = cancelFont;
 		}else {
 			button.titleLabel.font = buttonFont;
@@ -284,7 +288,7 @@ static UIFont *cancelFont = nil;
         button.tag = i+1;
         
         [button setBackgroundImage:image forState:UIControlStateNormal];
-		if([color isEqualToString:@"red"]){
+		if(buttonType == kBlockButtonDestroy){
 			[button setTitleColor:KAlertViewDestructColor forState:UIControlStateNormal];
 		}else {
 			[button setTitleColor:kAlertViewButtonTextColor forState:UIControlStateNormal];
